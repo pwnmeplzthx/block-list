@@ -1,5 +1,5 @@
 version: "3.9"
-
+name: block-list
 services:
   db:
     container_name: block-list-db
