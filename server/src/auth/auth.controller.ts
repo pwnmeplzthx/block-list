@@ -18,6 +18,7 @@ export class AuthController {
     @Post('sign-up')
     @ApiCreatedResponse()
     async signUp(
+        // Представление принимаемых параметров
         @Body() body: SignInBodyDto,
         @Res({passthrough: true}) res: Response
     ) {
@@ -55,6 +56,7 @@ export class AuthController {
     }
 
     @Get('session')
+    // Описываем возвращаемое представление
     @ApiOkResponse({
         type: GetSessionInfoDto,
     })
