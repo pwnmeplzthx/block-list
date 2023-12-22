@@ -7,6 +7,7 @@ import { SessionInfo } from 'src/auth/session-info.decorator';
 import { GetSessionInfoDto } from 'src/auth/dto';
 
 @Controller('account')
+// декоратор, делает сессию доступной во всех эндпоинтах контроллера
 @UseGuards(AuthGuard)
 export class AccountController {
 
