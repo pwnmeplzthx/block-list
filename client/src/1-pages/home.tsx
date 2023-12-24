@@ -1,4 +1,5 @@
 import { SignOutButton } from '@/3-features/auth'
+import { useSessionQuery } from '@/4-entities/session/queries'
 import { authControllerGetSessionInfo } from '@/5-shared/api/generated'
 import { UIButton } from '@/5-shared/ui/ui-button'
 import { UIHeader } from '@/5-shared/ui/ui-header'
@@ -9,17 +10,20 @@ import { UITextField } from '@/5-shared/ui/ui-text-field'
 import { useQuery } from '@tanstack/react-query'
 
 export function HomePage () {
-
-    const { data } = useQuery({
-        queryKey: ['session'],
-        queryFn: () => authControllerGetSessionInfo()
-    })
+    const { data } = useSessionQuery();
 
     return (
         <main
             className={`min-h-screen`}
         >
-            <UIHeader right={<div className='flex gap-4 items-center justify-center'>{data?.email} <SignOutButton /></div>} />
+            <UIHeader 
+                right={
+                    <div className='flex gap-4 items-center justify-center'>
+                        {data?.email}
+                        <SignOutButton />
+                    </div>
+                }
+            />
             <UIButton variant="primary">Primary</UIButton>
             <UIButton variant="secondary">Secondary</UIButton>
             <UIButton variant="outlined">Outlined</UIButton>
