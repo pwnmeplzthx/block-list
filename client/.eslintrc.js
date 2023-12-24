@@ -50,6 +50,6 @@ module.exports = {
         'jsx-a11y/label-has-associated-control': 'off',
         'default-case': 'off',
         'react/jsx-props-no-spreading': 'off',
-        '@typescript-eslint/no-redeclare': '1'
+        // '@typescript-eslint/no-redeclare': '1'
     },
 };
