@@ -1,7 +1,7 @@
 import { authControllerGetSessionInfo } from "@/5-shared/api/generated";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 
-export const sessionKey = ['session'];
+const sessionKey = ['session'];
 
 export function useSessionQuery() {
     return useQuery({
@@ -15,4 +15,4 @@ export function useSessionQuery() {
 export function useResetSession() {
     const queryClient = useQueryClient();
     return () => queryClient.removeQueries({ queryKey: sessionKey });
-}
+};

@@ -1,4 +1,5 @@
-import { useSessionQuery } from "@/4-entities/session/queries";
+
+import { useSessionQuery } from "@/4-entities/session";
 import { ROUTES } from "@/5-shared/consts/routes";
 import { UIPageSpinner } from "@/5-shared/ui/ui-page-spinner";
 import { useRouter } from "next/router";
