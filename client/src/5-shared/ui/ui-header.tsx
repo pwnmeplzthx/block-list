@@ -10,7 +10,7 @@ export function UIHeader({
     right?: ReactNode;
 }) {
     return (
-        <header className={clsx("px-4 py-5 border-b border-b-slate-300 flex justify-between items-center", className)}>
+        <header className={clsx("px-4 py-5 bg-white border-b border-b-slate-300 flex justify-between items-center", className)}>
             <UILogo />
             {right}
         </header>

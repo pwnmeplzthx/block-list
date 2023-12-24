@@ -5,7 +5,7 @@ type UIButtonVariant = 'primary' | 'secondary' | 'outlined'
 
 export type UIButtonProps = {
     className?: string;
-    variant: UIButtonVariant;
+    variant?: UIButtonVariant;
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
 export function UIButton(props: UIButtonProps) {

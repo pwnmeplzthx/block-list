@@ -1,3 +1,4 @@
+import { SignOutButton } from '@/3-features/auth'
 import { authControllerGetSessionInfo } from '@/5-shared/api/generated'
 import { UIButton } from '@/5-shared/ui/ui-button'
 import { UIHeader } from '@/5-shared/ui/ui-header'
@@ -18,7 +19,7 @@ export function HomePage () {
         <main
             className={`min-h-screen`}
         >
-            <UIHeader right={<div>{data?.email}</div>} />
+            <UIHeader right={<div className='flex gap-4 items-center justify-center'>{data?.email} <SignOutButton /></div>} />
             <UIButton variant="primary">Primary</UIButton>
             <UIButton variant="secondary">Secondary</UIButton>
             <UIButton variant="outlined">Outlined</UIButton>
