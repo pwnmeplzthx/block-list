@@ -18,7 +18,7 @@ export function useUpdateAccountMutation() {
             queryClient.setQueryData(accountKey, data)
         },
         async onSettled() {
-            await queryClient.invalidateQueries({ queryKey: accountKey });
+            await queryClient.invalidateQueries();
         }
     });
 };
