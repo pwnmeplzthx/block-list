@@ -11,9 +11,6 @@ const typeOptions = [
 
 export function AddBlockItemForm() {
     const {handleSubmit, isLoading, register, type} = useBlockItemForm();
-    console.log('type', type)
-    console.log('type', type)
-    console.log('type', type)
     const typeHandler = type === 'KeyWord' ? 'Enter Key word...' : 'Enter Website'
 
     return (

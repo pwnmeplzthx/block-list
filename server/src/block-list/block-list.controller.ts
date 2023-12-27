@@ -34,7 +34,6 @@ export class BlockListController {
         @Body() body: AddBlockItemDto,
         @SessionInfo() session: GetSessionInfoDto
     ):Promise<BlockListDto> {
-        console.log('hello wolds!!!')
         return this.blockListService.addItem(session.id, body);
     }
 
