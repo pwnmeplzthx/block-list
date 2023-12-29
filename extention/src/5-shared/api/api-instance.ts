@@ -1,4 +1,4 @@
-const baseURL = '<http://localhost:3000>'; // use your own URL here or environment variable
+const baseURL = 'http://localhost:3000'; // use your own URL here or environment variable
 
 class ApiError extends Error {
     constructor(public data:unknown) {
@@ -23,6 +23,7 @@ export const createInstance = async <T>({
         `${baseURL}${url}` + new URLSearchParams(params),
         {
             method,
+            credentials: 'include',
             ...(data ? { body: JSON.stringify(data) } : {}),
         },
     );

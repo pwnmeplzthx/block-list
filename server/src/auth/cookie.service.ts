@@ -11,6 +11,9 @@ export class CookieService {
             httpOnly: true,
             // время жизни токена 1 день
             maxAge: 24 * 60 * 60 * 1000,
+            // работает только с secure
+            sameSite: 'none',
+            secure: true,
         });
     }
 

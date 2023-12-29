@@ -1,7 +1,8 @@
 import axios, { AxiosError, AxiosRequestConfig } from "axios";
 
 const apiInstance = axios.create({
-    baseURL: '/api',
+    baseURL: 'http://localhost:3000',
+    withCredentials: true,
     headers: {
         'Content-Type': 'application/json'
     }
@@ -19,4 +20,4 @@ export const createInstance = <T>(
 }
 
 export type BodyType<Data> = Data;
-export type ErrorType<Error> = AxiosError;
+export type ErrorType<Error> = AxiosError<Error>;
