@@ -1,0 +1,1 @@
+export { HopmePage } from './home.page'
