@@ -2,5 +2,16 @@
     "manifest_version": 3,
     "name": "Block-List CRXJS",
     "version": "1.0.0",
-    "action": { "default_popup": "index.html" }
+    "action": { "default_popup": "index.html" },
+    "permissions": [
+        "declarativeNetRequest",
+        "alarms"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "background": {
+        "service_worker": "src/0-app/background.ts",
+        "type": "module"
+    }
 }
