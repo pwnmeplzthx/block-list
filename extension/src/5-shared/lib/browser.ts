@@ -39,3 +39,14 @@ export const addInstallListener = (callBack: () => Awaited<void>) => {
         await callBack();
     });
 }
+
+let currentIcon: string = '';
+export const setIcon = (url: string) => {
+    if (url !== currentIcon) {
+        currentIcon = url;
+        chrome.action.setIcon({
+            path: chrome.runtime.getURL(url)
+        });
+    }
+    
+}
